@@ -1,3 +1,3 @@
-require './models'
-console.log 'foo'
+require './app'
 
+console.log 'initialized!'

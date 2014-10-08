@@ -1,5 +1,7 @@
 gulp = require('gulp')
 webpack = require('gulp-webpack')
+coffee = require 'gulp-coffee'
+tsd = require 'gulp-tsd'
 
 config =
   output:
@@ -13,12 +15,23 @@ config =
   resolve:
     extensions: ["", ".coffee", ".ts", ".js"]
 
+gulp.task 'coffee', ->
+  gulp.src('./app/**/*.coffee')
+   .pipe(coffee())
+   .pipe(gulp.dest('./lib'))
+
+gulp.task 'tsd', ->
+  gulp
+    .src './gulp-tsd.json'
+    .pipe tsd()
+
 gulp.task 'webpack', ->
-  gulp.src('app/initialize.coffee')
+  gulp.src('lib/initialize.js')
     .pipe(webpack(config))
-    .pipe(gulp.dest('public/'))
+    .pipe(gulp.dest('public'))
 
 gulp.task 'watch', ['webpack'], ->
-  gulp.watch 'app/**/*.coffee', ['webpack']
+  gulp.watch 'app/**/*.coffee', ['coffee']
+  gulp.watch 'lib/**/*.js', ['webpack']
 
 gulp.task 'default', ['webpack']
