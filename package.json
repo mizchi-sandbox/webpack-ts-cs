@@ -1,5 +1,5 @@
 {
-  "name": "my-feed-reader",
+  "name": "webpack-sandbox-cs-ts",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -9,25 +9,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "co": "^3.1.0",
-    "coffee-loader": "^0.7.2",
-    "coffee-script": "git://github.com/jashkenas/coffeescript",
+  },
+  "devDependencies": {
     "gulp": "^3.8.8",
     "gulp-watch": "^1.0.7",
     "gulp-webpack": "^0.4.1",
-    "moment": "^2.8.3"
-  },
-  "devDependencies": {
     "gulp-coffee": "^2.2.0",
     "gulp-tsd": "0.0.3",
-    "jquery": "^2.1.1",
-    "lodash": "^2.4.1",
-    "mousetrap": "0.0.1",
     "react": "^0.11.2",
     "react-addons": "^0.9.0",
-    "react-kup": "^0.3.0",
-    "superagent": "^0.20.0",
-    "ts-loader": "git://github.com/robarnold/ts-loader",
-    "typescript-loader": "^0.1.2"
+    "react-kup": "^0.3.0"
   }
 }
