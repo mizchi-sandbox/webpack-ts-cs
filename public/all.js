@@ -44,28 +44,9 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(1);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./models\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
 	console.log('foo');
-
-
-/***/ },
-/* 1 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/// <reference path="foo.ts" />
-	var M;
-	(function (M) {
-	    var A = (function () {
-	        function A() {
-	            this.p = { x: 1, y: 3 };
-	        }
-	        return A;
-	    })();
-	})(M || (M = {}));
-
-	module.exports = M;
-
 
 
 /***/ }

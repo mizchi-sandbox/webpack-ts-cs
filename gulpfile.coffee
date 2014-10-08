@@ -7,8 +7,8 @@ config =
   module:
     loaders: [
       { test: /\.coffee$/, loader: "coffee" }
-      # { test: /\.ts$/, loader: "typescript" }
-      { test: /\.ts$/, loader: "ts-loader" }
+      # { test: /\.ts$/, loader: "typescript-loader" }
+      # { test: /\.ts$/, loader: "ts-loader" }
     ]
   resolve:
     extensions: ["", ".coffee", ".ts", ".js"]
